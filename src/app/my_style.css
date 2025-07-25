@@ -1,0 +1,66 @@
+@import "tailwindcss";
+
+@utility color-rotate {
+  opacity: 0; /* Initial state: fully transparent */
+  background: linear-gradient(90deg, #FDC830, #A96CFF, #F37335);
+  background-size: 400% 400%;
+  animation: gradient-shift 5s infinite;
+}
+
+@theme {
+  --color-navy: #2C3E50;
+  --color-smoke: #B0AEAE;
+  --color-danger: #710000;
+  --color-common: #005EFF;
+  --color-rare: #9500FF;
+  --color-legendary: #FFEA00
+}
+
+@theme {
+  --animate-wiggle: wiggle 1s ease-in-out infinite;
+  @keyframes wiggle {
+    0%,
+    100% {
+      transform: rotate(-10deg);
+    }
+    50% {
+      transform: rotate(10deg);
+    }
+  }
+
+  --animate-gradient-shift: gradient-shift 5s ease-in-out infinite;
+  @keyframes gradient-shift {
+    0% {
+      background-position: 0% 50%;
+      opacity: 0.5;
+    }
+    50% {
+      background-position: 100% 50%;
+      opacity: 1;
+    }
+    100% {
+      background-position: 0% 50%;
+      opacity: 0.5;
+    }
+  }
+
+  --animate-fade-in-out: fade-in-out 5s ease-in-out infinite;
+  @keyframes fade-in-out {
+    0%,
+    100% {
+      opacity: 0.2;
+    }
+    50% {
+      opacity: 1;
+    }
+  }
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;     /* Firefox */
+}
