@@ -238,8 +238,8 @@ const GameEngine: React.FC<GameEngineProp> = ({game}) => {
         <div className="flex-1 flex flex-col gap-4 md:gap-0">
             <div className="flex flex-row">
                 <div className="w-full md:w-1/2 flex flex-col items-center gap-4">
-                    <div className="w-[90%] border-b-2 border-b-[#B0AEAE] flex justify-center text-4xl p-4">{game.g_name}</div>
-                    <div className="w-[90%] border-b-2 border-b-[#B0AEAE] flex justify-center text-4xl p-4">
+                    <div className="w-[90%] border-b-2 border-b-[#B0AEAE] flex justify-center text-2xl md:text-4xl p-4">{game.g_name}</div>
+                    <div className="w-[90%] border-b-2 border-b-[#B0AEAE] flex justify-center text-2xl md:text-4xl p-4">
                         <select className="w-full text-center" value={chosen_banner?chosen_banner.b_id:-1} onChange={handleBannerChange}>
                             <option value={-1}>-- Choose A Banner --</option>
                             {
