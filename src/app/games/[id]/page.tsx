@@ -46,7 +46,7 @@ export default async function GamePage({params}: {params: Promise<{ id: string }
     }
 
     return (
-        <main className="w-full h-full flex justify-center overflow-y-scroll">
+        <main className="w-full h-full flex justify-center">
             <div className="w-[95%] md:w-[90%] h-full flex flex-col">
                 <GameEngine
                     game={game}
