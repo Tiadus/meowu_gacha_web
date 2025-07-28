@@ -18,6 +18,7 @@ export type GameCharacter = {
   gc_id: number,
   gc_name: string,
   image_url: string,
+  c_type: string,
   rarity: number,
   limited: boolean,
   date_added: Date,

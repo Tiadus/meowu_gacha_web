@@ -102,8 +102,9 @@ const GameEngine: React.FC<GameEngineProp> = ({game}) => {
     function find_character_based_on_id(character_id: number): GameCharacter {
         const error_character = {
             gc_id: 0,
-            gc_name: 'Test Cat 1',
-            image_url: 'test_cat.jpg',
+            gc_name: '',
+            image_url: '',
+            c_type: 'CHARACTER',
             rarity: 5,
             limited: true,
             date_added: new Date('2025-07-19T14:46:36.000Z'),
@@ -250,7 +251,7 @@ const GameEngine: React.FC<GameEngineProp> = ({game}) => {
                     </div>
                 </div>
                 <div className="hidden md:block relative w-1/2">
-                    <Image src={'/banner.png'} priority alt={game.image_url} sizes="80vw" fill={true} className=""/>
+                    <Image src={`/games/${game.image_url}`} priority alt={game.image_url} sizes="80vw" fill={true} className=""/>
                 </div>
             </div>
             <div className="flex-1 flex flex-col">
