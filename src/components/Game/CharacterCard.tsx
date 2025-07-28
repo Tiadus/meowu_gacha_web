@@ -29,8 +29,10 @@ const CharacterCard: React.FC<CharacterCardProp> = ({character, highest_rarity})
                     sizes="20vw" 
                     className="transition-transform duration-300 ease-in-out transform group-hover:scale-110"/>
             </div>
-            <div className='w-full flex-1 flex md:justify-center md:items-center bg-white text-sm md:text-lg whitespace-nowrap'>
-                {character.rarity}✨: {character.gc_name}
+            <div className='w-full flex-1 flex justify-center items-center'>
+                <div className='w-[90%] text-center text-sm md:text-lg whitespace-nowrap text-ellipsis overflow-hidden'>
+                    {character.rarity}✨: {character.gc_name}
+                </div>
             </div>
         </div>
     )
