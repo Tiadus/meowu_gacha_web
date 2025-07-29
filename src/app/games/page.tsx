@@ -48,7 +48,7 @@ export default async function GameListPage() {
         <div className="flex-1 w-full flex flex-wrap gap-4 justify-center">
           {
            games.map((game) => (
-              <div key={game.g_id} className="w-full h-[50%] md:w-[25%] md:h-[60%]">
+              <div key={game.g_id} className="w-full h-[50%] md:w-[25%] md:aspect-[7/9]">
                 <GameCard game={game}/>
               </div>
             ))

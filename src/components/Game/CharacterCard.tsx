@@ -20,7 +20,7 @@ const CharacterCard: React.FC<CharacterCardProp> = ({character, highest_rarity})
     }
 
     return(
-        <div className={`group w-full h-full border-4 border-solid rounded-xl ${determine_character_card_border(character.rarity)} flex flex-col overflow-hidden hover:shadow-2xl`}>
+        <div className={`group w-full h-full md:aspect-[4/3] border-4 border-solid rounded-xl ${determine_character_card_border(character.rarity)} flex flex-col overflow-hidden hover:shadow-2xl`}>
             <div className={'relative w-full h-[80%] flex justify-center items-center overflow-hidden'}>
                 <Image 
                     src={`/characters/${character.image_url}`} 
