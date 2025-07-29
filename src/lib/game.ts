@@ -27,7 +27,14 @@ export const fetchGameDetail = cache(async (g_id: number): Promise<Game | undefi
     const res = await fetch(`${baseUrl}/games/${g_id}`);
 
     if (!res.ok) {
-        throw new Error(`Failed To Fetch Game With ID: ${g_id}`)
+        const errorText = await res.text(); // get raw response
+        console.error("Fetch failed:", {
+            status: res.status,
+            statusText: res.statusText,
+            url: res.url,
+            body: errorText
+        });
+        throw new Error(`Failed To Fetch Games With ID ${g_id}: ${res.status} ${res.statusText}`);
     }
 
     const json = await res.json();
