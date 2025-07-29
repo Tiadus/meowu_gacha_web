@@ -9,7 +9,14 @@ export const fetchGames = cache(async () => {
     });
 
     if (!res.ok) {
-        throw new Error(`Failed To Fetch Games`)
+        const errorText = await res.text(); // get raw response
+        console.error("Fetch failed:", {
+            status: res.status,
+            statusText: res.statusText,
+            url: res.url,
+            body: errorText
+        });
+        throw new Error(`Failed to fetch games: ${res.status} ${res.statusText}`);
     }
 
     const json = await res.json();
