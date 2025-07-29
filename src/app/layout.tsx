@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./my_style.css";
 import MainLogo from "@/components/UI/Logo/MainLogo";
 import KofiLogo from "@/components/UI/Logo/KofiLogo";
+import { GoogleAnalytics } from '@next/third-parties/google'
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -26,9 +27,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <head>
-        
-      </head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased w-screen h-screen flex flex-col gap-4`}>
         <div className='w-full bg-[#2C3E50] flex justify-center sticky top-0 p-2 z-50'>
           <div className='w-[95%] flex flex-row'>
@@ -39,6 +37,7 @@ export default function RootLayout({
         <div className='flex-1 min-h-0 w-full'>
           {children}
         </div>
+        <GoogleAnalytics gaId="G-0F8JZB175Q" />
       </body>
     </html>
   );
