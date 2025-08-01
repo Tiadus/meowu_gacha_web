@@ -7,7 +7,7 @@ export const dynamic = "force-static"; // ensures static generation at build
 
 export const metadata = {
   title: 'Meowu Gacha – Ultimate Gacha Simulators',
-  metadataBase: new URL('http://localhost:3000'),
+  metadataBase: new URL('https://meowu-gacha-web.vercel.app'),
   description: 'Try your luck in cute animal gacha simulators inspired by Honkai: Star Rail, Wuthering Waves, and more!',
   openGraph: {
     title: 'Meowu Gacha',

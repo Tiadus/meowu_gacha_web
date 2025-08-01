@@ -19,7 +19,7 @@ export async function generateMetadata({params}: {params: Promise<{ id: string }
 
     return {
         title: `${game?.g_name} - Meowu Gacha`,
-        metadataBase: new URL('http://localhost:3000'),
+        metadataBase: new URL('https://meowu-gacha-web.vercel.app'),
         description: `A Parody Gacha Experience ${game?.introduction}. Pull random animals in ${game?.g_name}!`,
         openGraph: {
             title: `${game.g_name} - Meowu Gacha`,

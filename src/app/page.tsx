@@ -1,9 +1,10 @@
 import Image from "next/image";
 import Link from "next/link"
+import Head from "next/head";
 
 export const metadata = {
   title: 'Meowu Gacha – Ultimate Gacha Simulators',
-  metadataBase: new URL('http://localhost:3000'),
+  metadataBase: new URL('https://meowu-gacha-web.vercel.app'),
   description: 'Try your luck in cute animal gacha simulators inspired by Honkai: Star Rail, Wuthering Waves, and more!',
   openGraph: {
     title: 'Meowu Gacha',
@@ -20,6 +21,21 @@ export const metadata = {
 
 export default function Home() {
   return (
+    <>
+    <Head>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "Meowu Gacha",
+            "url": "https://meowu-gacha-web.vercel.app",
+            "logo": "https://meowu-gacha-web.vercel.app/meowu_gacha_logo.png"
+          }),
+        }}
+      />
+    </Head>
     <main className="w-full h-full flex justify-center items-center">
         <span className="group w-[400] h-[400] md:w-[700] md:h-[400]">
           <Link href='/games' className="w-full h-full flex justify-center items-center">
@@ -36,5 +52,6 @@ export default function Home() {
           </Link>
         </span>
     </main>
+    </>
   );
 }
