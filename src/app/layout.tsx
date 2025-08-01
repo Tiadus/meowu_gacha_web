@@ -4,6 +4,7 @@ import "./my_style.css";
 import MainLogo from "@/components/UI/Logo/MainLogo";
 import KofiLogo from "@/components/UI/Logo/KofiLogo";
 import { GoogleAnalytics } from '@next/third-parties/google'
+import Head from "next/head";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -27,9 +28,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <head>
+      <Head>
+        <meta property="og:site_name" content="Meowu Gacha" />
+        <meta property="og:image" content="https://meowu-gacha-web.vercel.app/meowu_gacha_logo.png" />
         <meta name="google-site-verification" content="_1miGTBEO-vjbgiRcTF3dDSGbCbau7joIM-e337DL_c" />
-      </head>
+      </Head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased w-full h-screen flex flex-col gap-4`}>
         <div className='w-full bg-[#2C3E50] flex justify-center sticky top-0 p-2 z-50'>
           <div className='w-[95%] flex flex-row'>
