@@ -18,17 +18,17 @@ export async function generateMetadata({params}: {params: Promise<{ id: string }
     if (!game) {return;}
 
     return {
-        title: `${game?.g_name} - Animal Gacha Simulator`,
-        metadataBase: new URL('http://localhost:3000'), // Still needed
+        title: `${game?.g_name} - Meowu Gacha`,
+        metadataBase: new URL('http://localhost:3000'),
         description: `A Parody Gacha Experience ${game?.introduction}. Pull random animals in ${game?.g_name}!`,
         openGraph: {
-            title: `${game.g_name} - Animal Gacha Simulator`,
-            description: `${game.introduction}. Draw cute animals, not characters.`,
+            title: `${game.g_name} - Meowu Gacha`,
+            description: `A Parody Gacha Experience ${game?.introduction}`,
             images: [`/${game.image_url}`],
         },
         twitter: {
             card: 'summary_large_image',
-            title: `${game.g_name} - Gacha with Animals`,
+            title: `${game.g_name} - Meowu Gacha`,
             description: `Try Your Luck In This Parody Gacha ${game?.introduction}.`,
             images: [game.image_url],
         },

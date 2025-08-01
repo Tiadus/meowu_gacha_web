@@ -6,17 +6,17 @@ import GameCard from "@/components/Game/GameCard";
 export const dynamic = "force-static"; // ensures static generation at build
 
 export const metadata = {
-  title: 'Animal Gacha Simulators – Inspired by Your Favorite Games',
+  title: 'Meowu Gacha – Ultimate Gacha Simulators',
   metadataBase: new URL('http://localhost:3000'),
   description: 'Try your luck in cute animal gacha simulators inspired by Honkai: Star Rail, Wuthering Waves, and more!',
   openGraph: {
-    title: 'Animal Gacha Simulators',
+    title: 'Meowu Gacha',
     description: 'Get random animal pics in gacha simulations inspired by top games.',
     images: ['/main.jpg'],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Animal Gacha Simulators',
+    title: 'Meowu Gacha',
     description: 'Cute animals. Inspired by real games. Pull now!',
     images: ['/main.jpg'],
   },
