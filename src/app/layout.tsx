@@ -27,6 +27,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <meta name="google-site-verification" content="_1miGTBEO-vjbgiRcTF3dDSGbCbau7joIM-e337DL_c" />
+      </head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased w-full h-screen flex flex-col gap-4`}>
         <div className='w-full bg-[#2C3E50] flex justify-center sticky top-0 p-2 z-50'>
           <div className='w-[95%] flex flex-row'>
