@@ -19,6 +19,9 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Meowu Gacha",
   description: "Try your luck in cute animal gacha simulators inspired by Honkai: Star Rail, Wuthering Waves, and more!",
+  icons: {
+    icon: '/meowu_gacha_logo.ico'
+  }
 };
 
 export default function RootLayout({
