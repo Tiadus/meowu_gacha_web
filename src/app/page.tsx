@@ -42,6 +42,7 @@ export default function Home() {
               </div>
             </Link>
           </span>
+          <h1 className="sr-only">Meowu Gacha</h1>
       </main>
     </>
   );
