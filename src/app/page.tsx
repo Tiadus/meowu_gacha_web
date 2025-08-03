@@ -22,36 +22,27 @@ export const metadata = {
 export default function Home() {
   return (
     <>
-    <Head>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Organization",
-            "name": "Meowu Gacha",
-            "url": "https://meowu-gacha-web.vercel.app",
-            "logo": "https://meowu-gacha-web.vercel.app/meowu_gacha_logo.png"
-          }),
-        }}
-      />
-    </Head>
-    <main className="w-full h-full flex justify-center items-center">
-        <span className="group w-[400] h-[400] md:w-[700] md:h-[400]">
-          <Link href='/games' className="w-full h-full flex justify-center items-center">
-            <div className="relative w-full md:w-[60%] h-full flex justify-center items-center">
-                <div className="animate-fade-in-out absolute w-full h-full overflow-hidden rounded-full bg-[#E0E0E0]"></div>
-                <div className="color-rotate absolute w-[96%] h-[96%] overflow-hidden rounded-full"></div>
-                <div className="absolute w-[88%] h-[90%] flex flex-col justify-center items-center rounded-full overflow-hidden bg-white">
-                  <div className="relative w-[60%] h-[70%] flex justify-center items-center overflow-hidden bg-white">
-                    <Image src={'/meowu_gacha_logo_big.png'} alt="gf" fill={true} sizes="100vw" className="group-hover:animate-wiggle"/>
+      <Head>
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"/>
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"/>
+        <meta name="keywords" content="meowu gacha, gacha simulator, cute animal gacha"/>
+      </Head>
+      <main className="w-full h-full flex justify-center items-center">
+          <span className="group w-[400] h-[400] md:w-[700] md:h-[400]">
+            <Link href='/games' className="w-full h-full flex justify-center items-center">
+              <div className="relative w-full md:w-[60%] h-full flex justify-center items-center">
+                  <div className="animate-fade-in-out absolute w-full h-full overflow-hidden rounded-full bg-[#E0E0E0]"></div>
+                  <div className="color-rotate absolute w-[96%] h-[96%] overflow-hidden rounded-full"></div>
+                  <div className="absolute w-[88%] h-[90%] flex flex-col justify-center items-center rounded-full overflow-hidden bg-white">
+                    <div className="relative w-[60%] h-[70%] flex justify-center items-center overflow-hidden bg-white">
+                      <Image src={'/meowu_gacha_logo_big.png'} alt="meowu_gacha_logo_big.png" fill={true} sizes="100vw" className="group-hover:animate-wiggle"/>
+                    </div>
+                    <h1 className="text-3xl">Meowu Gacha</h1>
                   </div>
-                  <div className="text-4xl">Start Game</div>
-                </div>
-            </div>
-          </Link>
-        </span>
-    </main>
+              </div>
+            </Link>
+          </span>
+      </main>
     </>
   );
 }
