@@ -34,6 +34,7 @@ export default function RootLayout({
         <meta name="google-site-verification" content="_1miGTBEO-vjbgiRcTF3dDSGbCbau7joIM-e337DL_c" />
       </Head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased w-full h-screen flex flex-col gap-4`}>
+        <h1 className="sr-only">Meowu Gacha</h1>
         <div className='w-full bg-[#2C3E50] flex justify-center sticky top-0 p-2 z-50'>
           <div className='w-[95%] flex flex-row'>
             <span className=""><MainLogo/></span>
@@ -44,7 +45,6 @@ export default function RootLayout({
           {children}
         </div>
         <GoogleAnalytics gaId="G-0F8JZB175Q" />
-        <h1 className="sr-only">Meowu Gacha</h1>
       </body>
     </html>
   );
